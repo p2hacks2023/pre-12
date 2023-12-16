@@ -41,7 +41,7 @@ Unity班：友杉　藤牧
 ・AR Foundation
 
 その他開発に使用したツール・サービス
-・Unity
-・MAYA
-・Adobe Illustrator
-・Figma
+・Unity  
+・MAYA  
+・Adobe Illustrator  
+・Figma  
