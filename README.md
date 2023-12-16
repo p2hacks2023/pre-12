@@ -43,3 +43,5 @@ Unity班：友杉　藤牧
 その他開発に使用したツール・サービス
 ・Unity
 ・MAYA
+・Adobe Illustrator
+・Figma
