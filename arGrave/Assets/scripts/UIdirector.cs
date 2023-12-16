@@ -26,7 +26,7 @@ public class UIdirector : MonoBehaviour
     {
         if (ifWaterMode)
         {
-            Button.GetComponent<Image>().color = new Color(1f,0.8f,1f);
+            Button.GetComponent<Image>().color = new Color(1f,0.5f,0.2f);
         }
         else
         {
@@ -45,6 +45,7 @@ public class UIdirector : MonoBehaviour
     }
 
     public void WaterButtonPressed()
+
     {
         if (ifWaterMode)
         {
@@ -70,6 +71,7 @@ public class UIdirector : MonoBehaviour
             GaugeValue = 0;
             GraveLevel += 1;
             this.Gauge.GetComponent<Image>().fillAmount -= 1f;
+            GetComponent<AudioSource>().Play();
         }
     }
 
