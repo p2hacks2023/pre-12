@@ -40,7 +40,7 @@ Unity班：友杉　藤牧
 利用したフレームワーク・ライブラリ  
 ・AR Foundation
 
-その他開発に使用したツール・サービス
+その他開発に使用したツール・サービス  
 ・Unity  
 ・MAYA  
 ・Adobe Illustrator  
