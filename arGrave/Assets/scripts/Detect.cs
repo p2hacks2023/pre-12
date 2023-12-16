@@ -43,6 +43,7 @@ public class Detect : MonoBehaviour
                         Emitter.GetComponent<ParticleSystem>().Play();
 
                         director.CountWaterTime();
+                        GetComponent<AudioSource>().Play();
                     }
                 }
             }

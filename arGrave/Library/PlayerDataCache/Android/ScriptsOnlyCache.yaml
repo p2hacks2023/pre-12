@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - ManageObject
     - TextDirector
     - UIdirector
+    - botSE
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
@@ -79,6 +80,14 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.OpenXR.Features.Interactions.PalmPoseInteraction
     - UnityEngine.XR.OpenXR.Features.Interactions.ValveIndexControllerProfile
     - UnityEngine.XR.OpenXR.OpenXRSettings
+    Unity.XR.Simulation:
+    - UnityEngine.XR.Simulation.SimulatedBoundedPlane
+    - UnityEngine.XR.Simulation.SimulatedEnvironmentProbe
+    - UnityEngine.XR.Simulation.SimulatedMeshClassification
+    - UnityEngine.XR.Simulation.SimulatedTrackedImage
+    - UnityEngine.XR.Simulation.SimulationEnvironment
+    - UnityEngine.XR.Simulation.XRSimulationPreferences
+    - UnityEngine.XR.Simulation.XRSimulationRuntimeSettings
     Unity.XR.Simulation.Editor.dll:
     - UnityEditor.XR.Simulation.SimulationEnvironmentAssetsManager
     - UnityEditor.XR.Simulation.XREnvironmentViewManager
@@ -129,10 +138,18 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.ARSubsystems.XRReferenceImage
     Unity.XR.OpenXR.Features.MetaQuestSupport:
     - UnityEngine.XR.OpenXR.Features.MetaQuestSupport.MetaQuestFeature/TargetDevice
+    Unity.XR.Simulation:
+    - UnityEngine.XR.Simulation.AnchorDiscoveryParams
+    - UnityEngine.XR.Simulation.EnvironmentProbeParams
+    - UnityEngine.XR.Simulation.EnvironmentScanParams
+    - UnityEngine.XR.Simulation.PlaneFindingParams
+    - UnityEngine.XR.Simulation.SimulationRenderSettings
+    - UnityEngine.XR.Simulation.TrackedImageDiscoveryParams
     UnityEngine.CoreModule:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
     - UnityEngine.Events.PersistentListenerMode
+    - UnityEngine.Pose
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
     - UnityEngine.TextCore.Glyph
@@ -149,6 +166,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: UIdirector
     methodName: WaterButtonPressed
+  - assembly: Assembly-CSharp
+    fullTypeName: botSE
+    methodName: OnClick
   sceneClasses:
     Assets/ExampleAssets/Scenes/SampleScene.unity:
     - Class: 1
@@ -173,6 +193,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -180,65 +206,81 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16722}
+      Script: {instanceID: 16724}
     - Class: 114
-      Script: {instanceID: 16758}
+      Script: {instanceID: 16760}
     - Class: 114
-      Script: {instanceID: 16884}
+      Script: {instanceID: 16886}
     - Class: 114
-      Script: {instanceID: 17012}
+      Script: {instanceID: 17014}
     - Class: 114
-      Script: {instanceID: 17056}
+      Script: {instanceID: 17058}
     - Class: 114
-      Script: {instanceID: 17630}
+      Script: {instanceID: 17632}
     - Class: 114
-      Script: {instanceID: 18284}
+      Script: {instanceID: 18286}
     - Class: 114
-      Script: {instanceID: 18586}
+      Script: {instanceID: 18588}
     - Class: 114
-      Script: {instanceID: 19006}
+      Script: {instanceID: 19008}
     - Class: 114
-      Script: {instanceID: 19268}
+      Script: {instanceID: 19270}
     - Class: 114
-      Script: {instanceID: 19840}
+      Script: {instanceID: 19842}
     - Class: 114
-      Script: {instanceID: 19932}
+      Script: {instanceID: 19924}
     - Class: 114
-      Script: {instanceID: 20094}
+      Script: {instanceID: 19934}
     - Class: 114
-      Script: {instanceID: 20222}
+      Script: {instanceID: 20096}
     - Class: 114
-      Script: {instanceID: 20562}
+      Script: {instanceID: 20224}
     - Class: 114
-      Script: {instanceID: 20794}
+      Script: {instanceID: 20564}
     - Class: 114
-      Script: {instanceID: 20954}
+      Script: {instanceID: 20694}
     - Class: 114
-      Script: {instanceID: 21270}
+      Script: {instanceID: 20796}
     - Class: 114
-      Script: {instanceID: 22044}
+      Script: {instanceID: 20956}
     - Class: 114
-      Script: {instanceID: 22902}
+      Script: {instanceID: 21272}
     - Class: 114
-      Script: {instanceID: 22944}
+      Script: {instanceID: 21538}
     - Class: 114
-      Script: {instanceID: 23026}
+      Script: {instanceID: 22046}
     - Class: 114
-      Script: {instanceID: 23130}
+      Script: {instanceID: 22444}
     - Class: 114
-      Script: {instanceID: 23644}
+      Script: {instanceID: 22904}
     - Class: 114
-      Script: {instanceID: 24126}
+      Script: {instanceID: 22946}
     - Class: 114
-      Script: {instanceID: 24372}
+      Script: {instanceID: 23028}
     - Class: 114
-      Script: {instanceID: 24446}
+      Script: {instanceID: 23132}
     - Class: 114
-      Script: {instanceID: 25274}
+      Script: {instanceID: 23646}
     - Class: 114
-      Script: {instanceID: 25892}
+      Script: {instanceID: 24128}
     - Class: 114
-      Script: {instanceID: 26090}
+      Script: {instanceID: 24374}
+    - Class: 114
+      Script: {instanceID: 24412}
+    - Class: 114
+      Script: {instanceID: 24448}
+    - Class: 114
+      Script: {instanceID: 24574}
+    - Class: 114
+      Script: {instanceID: 25226}
+    - Class: 114
+      Script: {instanceID: 25276}
+    - Class: 114
+      Script: {instanceID: 25894}
+    - Class: 114
+      Script: {instanceID: 26092}
+    - Class: 114
+      Script: {instanceID: 40498}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -800,6 +842,12 @@ ScriptsOnlyBuild:
     className: ScriptGraphAsset
   - hash:
       serializedVersion: 2
+      Hash: a4f282f17dbc8715008f1c33c059fcde
+    assemblyName: Unity.XR.Simulation
+    namespaceName: UnityEngine.XR.Simulation
+    className: SimulationEnvironment
+  - hash:
+      serializedVersion: 2
       Hash: 776903a262591f2540a3bf11e8543daf
     assemblyName: Unity.XR.ARFoundation
     namespaceName: UnityEngine.XR.ARFoundation
@@ -980,6 +1028,12 @@ ScriptsOnlyBuild:
     className: MLSpatialMapper
   - hash:
       serializedVersion: 2
+      Hash: 97abff11892aaeb9b950604d8b17e5f2
+    assemblyName: Unity.XR.Simulation
+    namespaceName: UnityEngine.XR.Simulation
+    className: SimulatedMeshClassification
+  - hash:
+      serializedVersion: 2
       Hash: 3c9169fda20c63cfd6006bfc181838d3
     assemblyName: Unity.XR.ARSubsystems
     namespaceName: UnityEngine.XR.ARSubsystems
@@ -1092,6 +1146,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: e83cfea3fb46665f7a5e91034366328e
+    assemblyName: Unity.XR.Simulation
+    namespaceName: UnityEngine.XR.Simulation
+    className: SimulatedEnvironmentProbe
   - hash:
       serializedVersion: 2
       Hash: 90cf308600fb4aeb677786843453ec55
@@ -1242,6 +1302,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnDeselectMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 0bc1c0ad5804c5c56fab664c01db30ab
+    assemblyName: Unity.XR.Simulation
+    namespaceName: UnityEngine.XR.Simulation
+    className: XRSimulationRuntimeSettings
   - hash:
       serializedVersion: 2
       Hash: b5007673bbbdb9d12597a1d8201370f5
@@ -1502,6 +1568,12 @@ ScriptsOnlyBuild:
     className: TrackedPoseDriver
   - hash:
       serializedVersion: 2
+      Hash: fd74545de2bf452bd5958c9a43f0ca98
+    assemblyName: Unity.XR.Simulation
+    namespaceName: UnityEngine.XR.Simulation
+    className: SimulatedBoundedPlane
+  - hash:
+      serializedVersion: 2
       Hash: c4b85a67513b4f0cf7b5fb2d5ded04b0
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1554,6 +1626,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.VisualScripting
     namespaceName: UnityEngine.XR.ARFoundation.VisualScripting
     className: ARCameraManagerListener
+  - hash:
+      serializedVersion: 2
+      Hash: 93a5435d27b01c6a5d0c4b55bcf0563f
+    assemblyName: Unity.XR.Simulation
+    namespaceName: UnityEngine.XR.Simulation
+    className: SimulatedTrackedImage
   - hash:
       serializedVersion: 2
       Hash: afb7b65d28d5a7423e69a1b076be0064
@@ -1650,6 +1728,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMoveMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: df48efa0381a7546b5eefbba6feab9dd
+    assemblyName: Unity.XR.Simulation
+    namespaceName: UnityEngine.XR.Simulation
+    className: XRSimulationPreferences
   - hash:
       serializedVersion: 2
       Hash: 4e3c4ed66ca536796a30acb96e6526d6
@@ -1854,6 +1938,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: a077f6f51374f9b8423c637c21b9cd66
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: botSE
   platform: 13
   scenePathNames:
   - Assets/ExampleAssets/Scenes/SampleScene.unity
